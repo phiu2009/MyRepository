@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_CQh14Dw5EeW5CofTkJljyw" name="NewModel">
+  <packagedElement xmi:type="uml:Component" xmi:id="_k_HBwD3OEeWWfbH4Y-V0kg" name="Parts Search">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="__1TLoD3PEeWWfbH4Y-V0kg" name="port1" aggregation="composite"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_yf87ID3PEeWWfbH4Y-V0kg" name="Interface1"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_pXNqcD3OEeWWfbH4Y-V0kg" name="Subscription"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_rynV4D3OEeWWfbH4Y-V0kg" name=" Enquiry"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_6jyEID3OEeWWfbH4Y-V0kg" name="Web User Interface"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_-xSmYD3OEeWWfbH4Y-V0kg" name="Admin  Interface"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_IdWcAD3PEeWWfbH4Y-V0kg" name="Parts Detail"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_PbHfYD3PEeWWfbH4Y-V0kg" name="Trade Phone Book"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_Rvgj4D3PEeWWfbH4Y-V0kg" name="FAQ"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_U5vrQD3PEeWWfbH4Y-V0kg" name="Ads"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_6nRHwD9UEeWG9Ki00NG2jw" name="User">
+    <ownedAttribute xmi:id="_znn_oD9VEeWG9Ki00NG2jw" name="id"/>
+    <ownedAttribute xmi:id="_uxmE0D9VEeWG9Ki00NG2jw" name="username"/>
+    <ownedAttribute xmi:id="_tAU7gD9VEeWG9Ki00NG2jw" name="password"/>
+    <ownedAttribute xmi:id="_jGSUQD9VEeWG9Ki00NG2jw" name="email"/>
+    <ownedAttribute xmi:id="_wMRTED9VEeWG9Ki00NG2jw" name="firstName"/>
+    <ownedAttribute xmi:id="_xRDw4D9VEeWG9Ki00NG2jw" name="lastName"/>
+    <ownedAttribute xmi:id="_ruDwcD9XEeWG9Ki00NG2jw" name="currentState" type="_biU-ID9WEeWG9Ki00NG2jw" aggregation="composite">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sOHJgD9XEeWG9Ki00NG2jw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sOHJgT9XEeWG9Ki00NG2jw" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-oloID9UEeWG9Ki00NG2jw" name="UserBuilder">
+    <ownedAttribute xmi:id="_QsljoD9WEeWG9Ki00NG2jw" name="user" type="_6nRHwD9UEeWG9Ki00NG2jw" aggregation="composite">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SaU30D9WEeWG9Ki00NG2jw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SaU30T9WEeWG9Ki00NG2jw" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_CCOoAD9WEeWG9Ki00NG2jw" name="build"/>
+    <ownedOperation xmi:id="_EjqqAD9WEeWG9Ki00NG2jw" name="buildBusinessInfo"/>
+    <ownedOperation xmi:id="_IdMgUD9WEeWG9Ki00NG2jw" name="buildContact"/>
+    <ownedOperation xmi:id="_MdH5kD9WEeWG9Ki00NG2jw" name="buildABN"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_biU-ID9WEeWG9Ki00NG2jw" name="UserState">
+    <ownedOperation xmi:id="_Vu800D9XEeWG9Ki00NG2jw" name="sendConfirmationEmail"/>
+    <ownedOperation xmi:id="_Xx15oD9XEeWG9Ki00NG2jw" name="confirmUser"/>
+    <ownedOperation xmi:id="_a0PToD9XEeWG9Ki00NG2jw" name="receiveSupplierPayment"/>
+    <ownedOperation xmi:id="_fRMAED9XEeWG9Ki00NG2jw" name="suspendUser"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_dbh7cD9WEeWG9Ki00NG2jw" name="NewUserState">
+    <interfaceRealization xmi:id="_AJerwD9YEeWG9Ki00NG2jw" client="_dbh7cD9WEeWG9Ki00NG2jw" supplier="_biU-ID9WEeWG9Ki00NG2jw" contract="_biU-ID9WEeWG9Ki00NG2jw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_e8mFkD9WEeWG9Ki00NG2jw" name="ConfirmedUserSttate">
+    <interfaceRealization xmi:id="_BTN7AD9YEeWG9Ki00NG2jw" client="_e8mFkD9WEeWG9Ki00NG2jw" supplier="_biU-ID9WEeWG9Ki00NG2jw" contract="_biU-ID9WEeWG9Ki00NG2jw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_nvUfcD9WEeWG9Ki00NG2jw" name="SupplierState">
+    <interfaceRealization xmi:id="_CEKPwD9YEeWG9Ki00NG2jw" client="_nvUfcD9WEeWG9Ki00NG2jw" supplier="_biU-ID9WEeWG9Ki00NG2jw" contract="_biU-ID9WEeWG9Ki00NG2jw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7r4UgD9WEeWG9Ki00NG2jw" name="SuspendedUserState">
+    <interfaceRealization xmi:id="_CqyK4D9YEeWG9Ki00NG2jw" client="_7r4UgD9WEeWG9Ki00NG2jw" supplier="_biU-ID9WEeWG9Ki00NG2jw" contract="_biU-ID9WEeWG9Ki00NG2jw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_2e9uQD9XEeWG9Ki00NG2jw" memberEnd="_2e9uQT9XEeWG9Ki00NG2jw _2fjkIj9XEeWG9Ki00NG2jw" navigableOwnedEnd="_2e9uQT9XEeWG9Ki00NG2jw _2fjkIj9XEeWG9Ki00NG2jw">
+    <ownedEnd xmi:id="_2e9uQT9XEeWG9Ki00NG2jw" name="userBuilders" type="_-oloID9UEeWG9Ki00NG2jw" association="_2e9uQD9XEeWG9Ki00NG2jw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2fjkID9XEeWG9Ki00NG2jw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2fjkIT9XEeWG9Ki00NG2jw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_2fjkIj9XEeWG9Ki00NG2jw" name="users" type="_6nRHwD9UEeWG9Ki00NG2jw" association="_2e9uQD9XEeWG9Ki00NG2jw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2gKBED9XEeWG9Ki00NG2jw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2gTyED9XEeWG9Ki00NG2jw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_789oAD9XEeWG9Ki00NG2jw" memberEnd="_79HZAD9XEeWG9Ki00NG2jw _79tO4j9XEeWG9Ki00NG2jw" navigableOwnedEnd="_79HZAD9XEeWG9Ki00NG2jw _79tO4j9XEeWG9Ki00NG2jw">
+    <ownedEnd xmi:id="_79HZAD9XEeWG9Ki00NG2jw" name="users" type="_6nRHwD9UEeWG9Ki00NG2jw" association="_789oAD9XEeWG9Ki00NG2jw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_79tO4D9XEeWG9Ki00NG2jw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_79tO4T9XEeWG9Ki00NG2jw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_79tO4j9XEeWG9Ki00NG2jw" name="userStates" type="_biU-ID9WEeWG9Ki00NG2jw" association="_789oAD9XEeWG9Ki00NG2jw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7-Tr0D9XEeWG9Ki00NG2jw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7-Tr0T9XEeWG9Ki00NG2jw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7Q9LsD9ZEeWG9Ki00NG2jw" name="SearchResult">
+    <ownedOperation xmi:id="_oMVOwD9aEeWG9Ki00NG2jw" name="filter"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_CZoCED9bEeWG9Ki00NG2jw" name="RegisteredUserDecorator">
+    <ownedAttribute xmi:id="_O1XKAD9bEeWG9Ki00NG2jw" name="searchResult" type="_7Q9LsD9ZEeWG9Ki00NG2jw" aggregation="composite">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Pn-SsD9bEeWG9Ki00NG2jw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pn-SsT9bEeWG9Ki00NG2jw" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_HvX-wD9bEeWG9Ki00NG2jw" name="sendEnquiry"/>
+    <ownedOperation xmi:id="_I1LwQD9bEeWG9Ki00NG2jw" name="saveSearch"/>
+    <ownedOperation xmi:id="_Lfjr0D9bEeWG9Ki00NG2jw" name="saveParts"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_RqSIsD9bEeWG9Ki00NG2jw" memberEnd="_RqSIsT9bEeWG9Ki00NG2jw _RqbSoj9bEeWG9Ki00NG2jw" navigableOwnedEnd="_RqSIsT9bEeWG9Ki00NG2jw _RqbSoj9bEeWG9Ki00NG2jw">
+    <ownedEnd xmi:id="_RqSIsT9bEeWG9Ki00NG2jw" name="registeredUserDecorators" type="_CZoCED9bEeWG9Ki00NG2jw" association="_RqSIsD9bEeWG9Ki00NG2jw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RqbSoD9bEeWG9Ki00NG2jw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RqbSoT9bEeWG9Ki00NG2jw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_RqbSoj9bEeWG9Ki00NG2jw" name="searchResults" type="_7Q9LsD9ZEeWG9Ki00NG2jw" association="_RqSIsD9bEeWG9Ki00NG2jw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RqbSoz9bEeWG9Ki00NG2jw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RqbSpD9bEeWG9Ki00NG2jw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_dBEv4D9dEeWG9Ki00NG2jw" name="AbstractUserService" isAbstract="true">
+    <ownedOperation xmi:id="_hbQcMD9dEeWG9Ki00NG2jw" name="isExistedUser"/>
+    <ownedOperation xmi:id="_jvHVMD9dEeWG9Ki00NG2jw" name="insertUser"/>
+    <ownedOperation xmi:id="_qKgrUD9dEeWG9Ki00NG2jw" name="sendEmail"/>
+    <ownedOperation xmi:id="_utS6AD9dEeWG9Ki00NG2jw" name="updateUser"/>
+    <ownedOperation xmi:id="_k_q-ID9dEeWG9Ki00NG2jw" name="redirect"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_zxsA8D9dEeWG9Ki00NG2jw" name="AdminUserService">
+    <generalization xmi:id="_A7e20D9gEeWG9Ki00NG2jw" general="_dBEv4D9dEeWG9Ki00NG2jw"/>
+    <ownedOperation xmi:id="_5_RkkD9dEeWG9Ki00NG2jw" name="redirect"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_13Ws8D9dEeWG9Ki00NG2jw" name="UserService">
+    <generalization xmi:id="_B9AlQD9gEeWG9Ki00NG2jw" general="_dBEv4D9dEeWG9Ki00NG2jw"/>
+    <ownedOperation xmi:id="_Catf0D9eEeWG9Ki00NG2jw" name="redirect"/>
+  </packagedElement>
+</uml:Model>
